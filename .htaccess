@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /codeigniter_project/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$l [L]
+</IfModule>
+
+#else
+<IfModule !mod_rewrite.c>
+ErrorDocument 404 /404.php
+</IfModule>
